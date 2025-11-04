@@ -1,0 +1,2 @@
+# GenAI_OpenSource_Project1
+build image comprehension, grammar_readingtranslation_soundcheck
