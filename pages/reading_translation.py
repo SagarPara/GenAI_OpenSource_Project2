@@ -1,9 +1,17 @@
 import streamlit as st
 import openai
-import config
 from openai import OpenAI
 
-client = OpenAI(api_key=config.API_KEY)
+
+import os
+from dotenv import load_dotenv
+# Read API Key from environment
+load_dotenv(override=True)
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+
+# client = OpenAI(api_key=config.OPEN_API_KEY)
 
 
 def generate_random_sentence():

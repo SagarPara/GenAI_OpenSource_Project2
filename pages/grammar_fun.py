@@ -1,8 +1,18 @@
 import streamlit as st
 import openai
-import config
 from openai import OpenAI
-client = OpenAI(api_key=config.API_KEY)
+
+import os
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
+
+# Read API Key from environment
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+
+# client = OpenAI(api_key=config.OPEN_API_KEY)
+
 
 
 def generate_grammar_exercise():
